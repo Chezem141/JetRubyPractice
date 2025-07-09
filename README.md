@@ -1,2 +1,2 @@
 # JetRubyPractice
-\(c_c)/
+/(c_c)/
