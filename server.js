@@ -20,10 +20,12 @@ app.get("/repos", (req, res) => {
   const repos = cache.get("trendingRepos") || [];
   const filteredRepos = repos.map((repo) => ({
     id: repo.id,
+    name: repo.name,
+    stars: repo.stargazers_count,
+    url: repo.html_url,
   }));
 
   res.json(filteredRepos);
-  // res.json(cache.get("trendingRepos" || []));
 });
 
 app.get("/", (req, res) => {
