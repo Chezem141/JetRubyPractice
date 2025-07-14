@@ -1,14 +1,15 @@
 const express = require("express");
 const path = require("path");
 const { fetchTrendingRepos, resetSyncTimer, cache } = require("./ghsync");
+const pool = require("./db");
 
 const app = express();
-const PORT = 3000;
+const PORT = 5000;
 
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")));
 
-app.get("/repos/:identifier", (req, res) => {
+app.get("/repos/:identifier", async (req, res) => {
   const repos = cache.get("trendingRepos") || [];
   const repo = repos.find(
     (r) => r.id == req.params.identifier || r.name == req.params.identifier
@@ -16,16 +17,15 @@ app.get("/repos/:identifier", (req, res) => {
   res.json(repo || { error: "Repository not found =(" });
 });
 
-app.get("/repos", (req, res) => {
-  const repos = cache.get("trendingRepos") || [];
-  const filteredRepos = repos.map((repo) => ({
-    id: repo.id,
-    name: repo.name,
-    stars: repo.stargazers_count,
-    url: repo.html_url,
-  }));
-
-  res.json(filteredRepos);
+app.get("/repos", async (req, res) => {
+  try {
+    const { rows } = await pool.query(
+      "select * from github_schema.repos order by stars desc"
+    );
+    res.json(rows);
+  } catch (error) {
+    res.status(500).json({ error: "DB error" });
+  }
 });
 
 app.get("/", (req, res) => {

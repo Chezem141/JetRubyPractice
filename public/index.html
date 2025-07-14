@@ -1,18 +1,20 @@
 <!DOCTYPE html>
-<head></head>
+<head>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
 <body>
-  <ul>
-    <li><a href="/repos">ТОп 5 дай 5 репозиториев мира</a></li>
-    <li>
-      топовый репик по названию / ID:<br />
-      <form id="repoForm">
-        <input type="text" id="repoIdentifier" required />
-        <button type="submit">жмай</button>
-      </form>
-    </li>
-  </ul>
+  <div class="top-five">
+    <a href="/repos" class="top-five-link">Топ 5 репозиториев</a>
+  </div>
+  <div class="repo-finder">
+    Репозиторий из топ 5 по названию / ID:<br />
+    <form id="repoForm" class="repoForm">
+      <input type="text" id="repoIdentifier" required />
+      <button type="submit">GO</button>
+    </form>
+  </div>
 
-  <div id="result"></div>
+  <div id="result" class="result"></div>
 
-  <script src="../static/script.js"></script>
+  <script src="script.js"></script>
 </body>

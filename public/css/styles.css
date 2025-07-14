@@ -1,0 +1,49 @@
+body {
+  margin: 0 auto;
+  text-align: center;
+  background-color: rgb(87, 94, 100);
+}
+
+a {
+  text-decoration: none;
+}
+
+.top-five {
+  margin-top: 10%;
+  margin-bottom: 2%;
+  background-color: rgb(19, 19, 19);
+  margin-left: 45%;
+  margin-right: 45%;
+  padding: 10px;
+  border-radius: 12px;
+}
+
+.top-five-link {
+  color: rgb(162, 98, 223);
+}
+
+.repo-finder {
+  background-color: rgb(19, 19, 19);
+  color: rgb(162, 98, 223);
+  border-radius: 12px;
+  padding: 10px;
+  margin-left: 42%;
+  margin-right: 42%;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.result {
+  background-color: rgb(19, 19, 19);
+  color: rgb(162, 98, 223);
+  border-radius: 12px;
+  padding: 10px;
+  margin-left: 42%;
+  margin-right: 42%;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.repoForm {
+  margin-top: 2%;
+}
