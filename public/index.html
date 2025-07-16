@@ -4,17 +4,24 @@
 </head>
 <body>
   <div class="top-five">
-    <a href="/repos" class="top-five-link">Топ 5 репозиториев</a>
+    <form id="top-five-find">
+      <p class="top-five-text">Топ 5 репозиториев</p>
+      <button type="submit">Найти</button>
+    </form>
   </div>
+
+  <div id="repos-result" class="repos-result"></div>
+
   <div class="repo-finder">
     Репозиторий из топ 5 по названию / ID:<br />
     <form id="repoForm" class="repoForm">
       <input type="text" id="repoIdentifier" required />
-      <button type="submit">GO</button>
+      <button type="submit">Найти</button>
     </form>
   </div>
 
   <div id="result" class="result"></div>
 
   <script src="script.js"></script>
+  <script src="script2.js"></script>
 </body>

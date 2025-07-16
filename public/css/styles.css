@@ -6,11 +6,21 @@ body {
 
 a {
   text-decoration: none;
+  color: rgb(186, 153, 218);
+}
+
+button {
+  background-color: rgb(170, 146, 170);
+  border: none;
+}
+
+input {
+  background-color: rgb(207, 203, 207);
+  border: none;
 }
 
 .top-five {
   margin-top: 10%;
-  margin-bottom: 2%;
   background-color: rgb(19, 19, 19);
   margin-left: 45%;
   margin-right: 45%;
@@ -18,24 +28,26 @@ a {
   border-radius: 12px;
 }
 
-.top-five-link {
-  color: rgb(162, 98, 223);
+.top-five-text {
+  color: rgb(186, 153, 218);
+  margin: 3px;
 }
 
 .repo-finder {
   background-color: rgb(19, 19, 19);
-  color: rgb(162, 98, 223);
+  color: rgb(186, 153, 218);
   border-radius: 12px;
   padding: 10px;
   margin-left: 42%;
   margin-right: 42%;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
+  margin-top: 2%;
 }
 
 .result {
   background-color: rgb(19, 19, 19);
-  color: rgb(162, 98, 223);
+  color: rgb(186, 153, 218);
   border-radius: 12px;
   padding: 10px;
   margin-left: 42%;
@@ -46,4 +58,45 @@ a {
 
 .repoForm {
   margin-top: 2%;
+}
+
+.openGH {
+  background-color: rgb(56, 57, 58);
+  padding-top: 1%;
+  padding-bottom: 1%;
+  padding-left: 2%;
+  padding-right: 2%;
+  border-radius: 5px;
+}
+
+.openGH-repos {
+  background-color: rgb(77, 78, 78);
+  padding-top: 1%;
+  padding-bottom: 1%;
+  padding-left: 2%;
+  padding-right: 2%;
+  border-radius: 5px;
+}
+
+.repos {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(19, 19, 19);
+  color: rgb(186, 153, 218);
+  border-radius: 12px;
+  padding: 10px;
+  margin-left: 19%;
+  margin-right: 19%;
+  margin-top: 4px;
+  justify-content: center;
+}
+
+.repos-item {
+  background-color: rgb(51, 51, 51);
+  margin-right: 1%;
+  margin-left: 1%;
+  padding-left: 1%;
+  padding-right: 1%;
+  min-width: 15%;
+  border-radius: 12px;
 }

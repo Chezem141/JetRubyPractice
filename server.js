@@ -14,7 +14,7 @@ app.get("/repos/:identifier", async (req, res) => {
   const repo = repos.find(
     (r) => r.id == req.params.identifier || r.name == req.params.identifier
   );
-  res.json(repo || { error: "Repository not found =(" });
+  res.json(repo || { error: "Репозиторий не найден" });
 });
 
 app.get("/repos", async (req, res) => {

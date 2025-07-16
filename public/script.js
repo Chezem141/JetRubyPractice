@@ -15,8 +15,8 @@ document.getElementById("repoForm").addEventListener("submit", async (e) => {
       res.innerHTML = `
             <h2>${data.name}</h2>
             <p>ID: ${data.id}</p>
-            <p>Stars: ${data.stargazers_count}</p>
-            <p><a href="${data.html_url}" target="_blank">Open on GitHub</a></p>
+            <p>Звёзд: ${data.stargazers_count}</p>
+            <p><a href="${data.html_url}" target="_blank" class="openGH">Открыть на GitHub</a></p>
             `;
     }
   } catch (error) {
